@@ -1,0 +1,95 @@
+{
+  "projectType": "saas",
+  "projectName": "AutoQuill AI",
+  "projectDescription": "A macOS desktop application that provides AI-powered system-wide audio transcription with global hotkeys, smart text enhancement, and an AI assistant mode.",
+  "theme": "mint",
+  "primaryColor": "#94cb04",
+  "lightColor": "#545454",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/standard-transcription",
+              "features/push-to-talk",
+              "features/ai-assistant",
+              "features/smart-transcription",
+              "features/phrase-replacements"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/api-setup",
+              "configuration/hotkeys",
+              "configuration/settings",
+              "configuration/auto-updates"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "troubleshooting/common-issues",
+              "troubleshooting/microphone-permissions",
+              "troubleshooting/hotkey-conflicts",
+              "troubleshooting/model-downloads"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Developer Guide",
+        "groups": [
+          {
+            "group": "Contributing",
+            "pages": [
+              "development/setup",
+              "development/architecture",
+              "development/contributing"
+            ]
+          },
+          {
+            "group": "Building & Distribution",
+            "pages": [
+              "development/build",
+              "development/distribution"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "System-wide audio transcription via global hotkeys",
+    "Push-to-Talk mode for real-time dictation",
+    "AI Assistant mode for voice-driven text editing and generation",
+    "Smart text formatting with Groq API integration",
+    "Custom phrase replacements and text shortcuts",
+    "Local Whisper model support for offline transcription",
+    "Auto-update system via Sparkle framework",
+    "Visual recording overlay with audio cues",
+    "Secure local API key storage with Hive"
+  ],
+  "publicApiSurface": [
+    "SmartTranscriptionService.enhanceTranscription(String originalText, String apiKey)",
+    "AssistantService.handleAssistantHotkey()",
+    "AssistantService.cancelRecording()",
+    "AssistantService.setRepositories(RecordingRepository, TranscriptionRepository)",
+    "HotkeyHandler - centralized global hotkey management",
+    "AppStorage - Hive-based local storage wrapper",
+    "SettingsService - centralized settings management",
+    "StatsService - usage statistics tracking"
+  ]
+}
